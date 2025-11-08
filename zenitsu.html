@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+    <style>
+
+    </style>
+</head>
+<body>
+        <div class="cc">
+    <div id="video">
+    <video autoplay muted loop playsinline>
+        <source src="/background/backgroundzenitsu.mp4" type="video/mp4">
+        <source src="video.webm" type="video/webm">
+    </video>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#video">Characters</a></li>
+                <li><a href="#icon">About</a></li>
+            </ul>
+        </nav>
+    <div class="namecharacter"><h1 class="z">z</h1><h1 class="e">e</h1><h1 class="n">n</h1><h1 class="i">i</h1><h1 class="s">s</h1><h1 class="u">u</h1></div>
+    </div>
+    <div id="icon" class="xx">
+        <div class="gioithieu">
+            <h2>zenitsu</h2>
+            <p>cậu bé nhút nhát zenitsu sợ hãi sợ sệt mọi thứ bởi cậu ta không tự tin vào chính mình lo sợ quá nhiều nhưng cậu ấy lại cực mạnh mặc dù sợ sệt nhưng con tim của cậu vẫn hướng lên phía trước.</p>
+        </div>
+        <div class="khay1">
+        <div class="chipi">
+            <div class="icon "></div>
+            <div class="icon "></div>
+            <div class="icon "></div>
+            <div class="icon "></div>
+            <div class="icon " ></div>
+            <div class="icon "></div>  
+            <div class="icon "></div>  
+            <div class="icon "></div>  
+            <div class="icon "></div>  
+            <div class="icon "></div>  
+            <div class="icon "></div>  
+        </div>
+        </div>
+        <div class="khay">
+        <div class="ngau">
+            <div class="ngaux "><div class="tieude">zenitsu</div></div>
+            <div class="ngaux "><div class="tieude">zenitsu</div></div>
+            <div class="ngaux "><div class="tieude">zenitsu</div></div>
+            <div class="ngaux "><div class="tieude">zenitsu</div></div>
+            <div class="ngaux "><div class="tieude">zenitsu</div></div>
+            <div class="ngaux "><div class="tieude">zenitsu</div></div>
+            <div class="ngaux "><div class="tieude">zenitsu</div></div>
+            <div class="ngaux "><div class="tieude">zenitsu</div></div>
+            <div class="ngaux "><div class="tieude">zenitsu</div></div>
+            <div class="ngaux "><div class="tieude">zenitsu</div></div>
+            <div class="ngaux "><div class="tieude">zenitsu</div></div>
+            <div class="ngaux " ><div class="tieude">zenitsu</div></div>
+            <div class="ngaux "><div class="tieude">zenitsu</div></div>
+        </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script>
+      const observer = new IntersectionObserver((entries,obs)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('show');
+        obs.unobserve(entry.target);
+      }
+    })
+  },{threshold:.2});
+  document.querySelectorAll('h1').forEach(el=>{
+    observer.observe(el);
+    
+  });
+  document.querySelectorAll('nav').forEach(el=>{
+    observer.observe(el);
+    
+  });
+  
+  document.querySelectorAll('li').forEach(el=>{
+    observer.observe(el);
+    
+  });
+     document.querySelectorAll('.gioithieu').forEach(el=>{
+    observer.observe(el);
+    
+  });
+   document.querySelectorAll('.namecharacter').forEach(el=>{
+    observer.observe(el);
+    
+  });
+   document.querySelectorAll('.khay').forEach(el=>{
+    observer.observe(el);
+    
+  });
+   document.querySelectorAll('.khay1').forEach(el=>{
+    observer.observe(el);
+    
+  });
+</script>
+</html>
